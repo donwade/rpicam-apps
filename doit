@@ -11,5 +11,7 @@ meson setup build --buildtype=debug -Denable_libav=enabled -Denable_drm=enabled 
 
 meson compile -C build --verbose | tee build.log
 
+sudo ninja -C build --verbose  install | tee install.log
+
 sudo ldconfig
 rpicam-still --version
